@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import Loadable from 'react-loadable';
 import logo from './logo.svg';
 import nodejs from './nodejs.png';
 import './App.css';
-
-const AsyncComponent = Loadable({
-  loader: () => import("./Test"),
-  loading: () => <div>loading...</div>
-});
 
 class App extends Component {
   render() {
@@ -28,7 +22,6 @@ class App extends Component {
           </a>
           <img src={nodejs} alt="nodejs" />
         </header>
-        <AsyncComponent />
       </div>
     );
   }

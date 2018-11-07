@@ -20,7 +20,8 @@ const getAssetHash = (data) => {
 
 export default (req, res) => {
     
-    const f = path.resolve(__dirname, '../../build/asset-manifest.json');
+    const f = path.resolve('/Users/piotrwiniarski/Projects/app/build/asset-manifest.json');
+    console.log('file: ', f);
     fs.readFile(f, 'utf-8', (err, data) => {
         if(err) {
             console.error('error: ',err);
@@ -31,6 +32,7 @@ export default (req, res) => {
 
         console.log('hashes: ', hashes);
         const content = ReactDOMServer.renderToString(<App />);
+        console.log('content: ', content);
         res.setHeader('Cache-Control', 'assets, max-age=604800')
         const response = template("Server Rendered Page", content, hashes);
         return res.send(response);

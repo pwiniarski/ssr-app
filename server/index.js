@@ -1,2 +1,2 @@
-require('@babel/register');
+console.log('here');
 require('./server');
