@@ -20,8 +20,8 @@ const getAssetHash = (data) => {
 
 export default (req, res) => {
     
-    const f = path.resolve('/Users/piotrwiniarski/Projects/app/build/asset-manifest.json');
-    console.log('file: ', f);
+    const f = path.resolve(__dirname,'../../asset-manifest.json');
+    console.log('fileddddd: ', f);
     fs.readFile(f, 'utf-8', (err, data) => {
         if(err) {
             console.error('error: ',err);

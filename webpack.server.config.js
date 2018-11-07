@@ -76,6 +76,9 @@ module.exports = {
         filename: 'static/js/server.js',
         chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js'
     },
+    node: {
+      __dirname: false
+    },
     module: {
         strictExportPresence: true,
         rules: [
@@ -118,10 +121,6 @@ module.exports = {
                   name: 'static/media/[name].[hash:8].[ext]',
                 },
             },
-            // {
-            //     test: /\.css$/,
-            //     use: [ 'style-loader', 'postcss-loader' ]
-            // },
             {
                 test: cssRegex,
                 exclude: cssModuleRegex,

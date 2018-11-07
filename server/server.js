@@ -8,10 +8,10 @@ const router = express.Router();
 
 router.use('^/$', serverRenderer);
 
-console.log('static: ', path.resolve(__dirname, '..', 'build/static'));
+console.log('static: ', path.resolve(__dirname, '../'));
 
 router.use(express.static(
-    path.resolve(__dirname, '..', 'build/static'),
+    path.resolve(__dirname, '../'),
     { maxAge: '30d' }
 ));
 
