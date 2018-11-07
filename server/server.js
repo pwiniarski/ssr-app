@@ -11,7 +11,7 @@ router.use('^/$', serverRenderer);
 console.log('static: ', path.resolve(__dirname, '..', 'build/static'));
 
 router.use(express.static(
-    path.resolve(__dirname, '..', 'build'),
+    path.resolve(__dirname, '..', 'build/static'),
     { maxAge: '30d' }
 ));
 
