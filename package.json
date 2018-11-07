@@ -12,7 +12,7 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "dev": "webpack --config webpack.server.config.js && node build/static/js/bundle.js",
+    "dev": "webpack --config webpack.server.config.js && node build/static/js/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

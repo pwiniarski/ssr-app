@@ -8,6 +8,8 @@ const router = express.Router();
 
 router.use('^/$', serverRenderer);
 
+console.log('static: ', path.resolve(__dirname, '..', 'build/static'));
+
 router.use(express.static(
     path.resolve(__dirname, '..', 'build'),
     { maxAge: '30d' }

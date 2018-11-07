@@ -11,8 +11,9 @@
 
 ### Server Side Set up
 
-* fix webpack server config so build folder is correctly filled. Currently css is not generated 
+* fix webpack server config so build folder is correctly filled, lack of favicon and html file.
 * Although bundle.js file is created as result of webpack joining bundling chunks, there is get / bundle.js failed message.
+* fix paths of files so they can be accesed in browser
 
 ### Server Side rendering
 * Incorrect path for png file, most likely issue with incorrect set up of webpack config for server
