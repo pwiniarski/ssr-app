@@ -107,7 +107,7 @@ module.exports = {
                   limit: 10000,
                   emitFile: false,
                   fallback: 'file-loader',
-                  name: 'static/media/[name].[hash:8].[ext]',
+                  name: 'static/media/[name].[ext]',
                 }
             },
             {
@@ -118,7 +118,7 @@ module.exports = {
                 exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
                 loader: require.resolve('file-loader'),
                 options: {
-                  name: 'static/media/[name].[hash:8].[ext]',
+                  name: 'static/media/[name].[ext]',
                 },
             },
             {

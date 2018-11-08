@@ -32,8 +32,6 @@ export default (req, res) => {
 
         console.log('hashes: ', hashes);
         let content = ReactDOMServer.renderToString(<App />);
-        const re = new RegExp('/static/media/nodejs.([a-z]*[0-9]*)+.png');
-        content = content.replace(re,`/static/media/nodejs.${Object.values(hashes[3])}.png`);
         console.log('content: ', content);
         res.setHeader('Cache-Control', 'assets, max-age=604800')
         const response = template("Server Rendered Page", content, hashes);
