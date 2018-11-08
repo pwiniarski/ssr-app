@@ -21,7 +21,7 @@ const getAssetHash = (data) => {
 export default (req, res) => {
     
     const f = path.resolve(__dirname,'../../asset-manifest.json');
-    console.log('fileddddd: ', f);
+    console.log('file: ', f);
     fs.readFile(f, 'utf-8', (err, data) => {
         if(err) {
             console.error('error: ',err);
@@ -31,7 +31,9 @@ export default (req, res) => {
         const hashes = getAssetHash(JSON.parse(data));
 
         console.log('hashes: ', hashes);
-        const content = ReactDOMServer.renderToString(<App />);
+        let content = ReactDOMServer.renderToString(<App />);
+        const re = new RegExp('/static/media/nodejs.([a-z]*[0-9]*)+.png');
+        content = content.replace(re,`/static/media/nodejs.${Object.values(hashes[3])}.png`);
         console.log('content: ', content);
         res.setHeader('Cache-Control', 'assets, max-age=604800')
         const response = template("Server Rendered Page", content, hashes);

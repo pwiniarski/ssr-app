@@ -4,11 +4,11 @@ function template(title, content = "", hashes){
                 <html lang="en">
                 <head>
                   <meta charset="utf-8">
-                  <link rel="shortcut icon" href="../build/favicon.ico">
+                  <link rel="shortcut icon" href="../favicon.ico">
                   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000">
-                  <link rel="manifest" href="../build/manifest.json">
+                  <link rel="manifest" href="manifest.json">
                   <title> ${title} </title>
-                  <link href="static/css/main.${hashes[0]['main.css']}.css" rel="stylesheet">
+                  <link href="/static/css/main.${hashes[0]['main.css']}.css" rel="stylesheet">
                 </head>
                 <body>
                 <noscript>You need to enable JavaScript to run this app.</noscript>

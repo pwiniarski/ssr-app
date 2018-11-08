@@ -107,7 +107,7 @@ module.exports = {
                   limit: 10000,
                   emitFile: false,
                   fallback: 'file-loader',
-                  name: '[name].[hash:8].[ext]',
+                  name: 'static/media/[name].[hash:8].[ext]',
                 }
             },
             {
